@@ -3,6 +3,9 @@
 use App\Controllers\CategoryController;
 use App\Controllers\ProductController;
 
+$uri = parse_url($_SERVER['REQUEST_URI'])['path'];
+var_dump($uri);
+die();
 $routes = [
     '/' => [ProductController::class, 'index'],
     'product/all' => [ProductController::class, 'index'],
